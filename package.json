@@ -1,0 +1,24 @@
+{
+  "name": "API-Edit-Manage-Tool",
+  "version": "1.0.0",
+  "description": "一个简单方便的个人API文档编辑管理工具",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjeejj/API-Edit-Manage-Tool.git"
+  },
+  "keywords": [
+    "API",
+    "Manage",
+    "Tool"
+  ],
+  "author": "jjeejj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjeejj/API-Edit-Manage-Tool/issues"
+  },
+  "homepage": "https://github.com/jjeejj/API-Edit-Manage-Tool"
+}
