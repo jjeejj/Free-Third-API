@@ -2,7 +2,7 @@
 
 ## 使用前提
 
-该文档 由 [API-Edit-Manage-Tool](https://github.com/jjeejj/API-Edit-Manage-Tool) 提供模版服务, 下面为这个模版服务 的使用说明文档
+该文档 由 [API-Edit-Manage-Tool](https://github.com/jjeejj/API-Edit-Manage-Tool) 提供模版服务, 下面是这个模版服务 的使用说明文档
 
 这个工具依赖 [`vuepress`](https://vuepress.vuejs.org) 请先全局安装 `npm install -g vuepress`
 
