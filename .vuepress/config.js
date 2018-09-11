@@ -1,6 +1,6 @@
 module.exports = {
     title: 'API 接口文档管理',
-    description: '免费的第三方API接口的手机(若有侵权,请联系我删除)',
+    description: '免费的第三方API接口的收集(若有侵权,请联系我删除)',
     head: [
         ['link',{rel: 'icon',href: '/favicon.ico'}]
     ],
