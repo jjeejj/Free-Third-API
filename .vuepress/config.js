@@ -21,5 +21,5 @@ module.exports = {
     },
     serviceWorker: true,
     dest: 'docs',
-    base: '/',
+    base: '/API-Edit-Manage-Tool/',
 }

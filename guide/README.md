@@ -25,6 +25,8 @@
 
 > 对于文档中的静态资源, 可以放到 `.vuepress/public` 文件夹下,然后 在 `md` 文件中这样引用的 `<img :src="$withBase('/apiManageTool.gif')" alt="apiManageTool">` 对于 变量 `withBase` 是在 `.vuepress/config.js` 配置中的 部署基础路径
 
+> 在本地进行开发的时候, 把 `.vuepress/config.js` 配置中的 `base` 改为 `\` 即可。 部署到 `github` 上时改为对应的 `/<REPO>/` 对应仓库的名称
+
 ## 部署
 
 对于部署的功能请参照 `vuepress` 的[官方文档](https://vuepress.vuejs.org/zh/guide/deploy.html#github-pages)
