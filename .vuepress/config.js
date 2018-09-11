@@ -1,6 +1,6 @@
 module.exports = {
     title: 'API 接口文档管理',
-    description: '简单方便的个人API文档编辑管理工具',
+    description: '免费的第三方API接口的手机(若有侵权,请联系我删除)',
     head: [
         ['link',{rel: 'icon',href: '/favicon.ico'}]
     ],
@@ -15,9 +15,9 @@ module.exports = {
         sidebarDepth: 2,
         sidebar: [
             '/guide/',
-            '/user/'
+            '/tool/'
         ],
-        repo: 'jjeejj/API-Edit-Manage-Tool',
+        repo: 'jjeejj/Free-Third-API',
         docsDir: 'docs',
         docsBranch: 'master'
     },
