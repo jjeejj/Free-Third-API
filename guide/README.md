@@ -27,6 +27,8 @@
 
 > 在本地进行开发的时候, 把 `.vuepress/config.js` 配置中的 `base` 改为 `\` 即可。 部署到 `github` 上时改为对应的 `/<REPO>/` 对应仓库的名称
 
+> 若内置的 `user` 模块对你没有作用,可以在你书写完 你自己的 `API` 信息后, 把 `user` 模块删除
+
 ## 部署
 
 对于部署的功能请参照 `vuepress` 的[官方文档](https://vuepress.vuejs.org/zh/guide/deploy.html#github-pages)
