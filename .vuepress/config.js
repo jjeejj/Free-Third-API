@@ -17,7 +17,7 @@ module.exports = {
             '/guide/',
             '/user/'
         ],
-        repo: 'vuejs/vuepress',
+        repo: 'jjeejj/API-Edit-Manage-Tool',
     },
     serviceWorker: true,
     dest: 'docs',
