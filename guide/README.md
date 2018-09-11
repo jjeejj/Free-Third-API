@@ -20,6 +20,7 @@
 1. 先在项目根目录下,新建一个文件夹命名为你需要的模块的名称: 比如 `newModule`
 2. 然后在该文件夹新建一个 `README.md` 文件,书写你的接口信息
 3. 最后一步 把刚刚建立的模块添加到 **侧边栏** 导航中. 步骤: 打开 项目根目录下的`.vuepress/config.js` 文件, 在 `themeConfig` 配置项的 `sidebar` 配置中 添加你新建模块的名称 , 注意 前后都要有 斜线 `/`
+4. 编写完成之后 执行 `npm run dev` ，查看预览效果, 执行 `npm run build` 编译成为静态文件
 
 > **API** 接口格式参照 `user` 模块下 `README.md` 文件中的内容
 
@@ -28,6 +29,17 @@
 > 在本地进行开发的时候, 把 `.vuepress/config.js` 配置中的 `base` 改为 `\` 即可。 部署到 `github` 上时改为对应的 `/<REPO>/` 对应仓库的名称
 
 > 若内置的 `user` 模块对你没有作用,可以在你书写完 你自己的 `API` 信息后, 把 `user` 模块删除
+
+## 上传到仓库地址
+
+1. 移除 `clone` 远程地址 `git remove origin`
+
+2. 添加你要上传的仓库地址 `git remote add <you git repo url>`
+
+3. 关联推送到原创仓库 `git push --set-upstream origin master`
+
+4. 之后的每次修改正常 `push` 到远程仓库就可以了
+
 
 ## 部署
 
