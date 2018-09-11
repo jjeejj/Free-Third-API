@@ -19,5 +19,7 @@ module.exports = {
         ],
         repo: 'vuejs/vuepress',
     },
-    serviceWorker: true
+    serviceWorker: true,
+    dest: 'docs',
+    base: '/API-Edit-Manage-Tool/'
 }
