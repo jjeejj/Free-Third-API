@@ -18,6 +18,8 @@ module.exports = {
             '/user/'
         ],
         repo: 'jjeejj/API-Edit-Manage-Tool',
+        docsDir: 'docs',
+        docsBranch: 'master'
     },
     serviceWorker: true,
     dest: 'docs',
