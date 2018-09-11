@@ -15,13 +15,15 @@
 
 新建一个模块步骤如下:
 
-![new module](/apiManageTool.gif)
+<img :src="$withBase('/apiManageTool.gif')" alt="foo">
 
 1. 先在项目根目录下,新建一个文件夹命名为你需要的模块的名称: 比如 `newModule`
 2. 然后在该文件夹新建一个 `README.md` 文件,书写你的接口信息
 3. 最后一步 把刚刚建立的模块添加到 **侧边栏** 导航中. 步骤: 打开 项目根目录下的`.vuepress/config.js` 文件, 在 `themeConfig` 配置项的 `sidebar` 配置中 添加你新建模块的名称 , 注意 前后都要有 斜线 `/`
 
 > **API** 接口格式参照 `user` 模块下 `README.md` 文件中的内容
+
+> 对于文档中的静态资源, 可以放到 `.vuepress/public` 文件夹下,然后 在 `md` 文件中这样引用的 `<img :src="$withBase('/apiManageTool.gif')" alt="apiManageTool">` 对于 变量 `withBase` 是在 `.vuepress/config.js` 配置中的 部署基础路径
 
 ## 部署
 
