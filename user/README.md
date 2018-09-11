@@ -2,6 +2,8 @@
 
 ## 用户注册
 
+`接口描述` : `用户注册接口,返回用户注册的后的状态`
+
 `请求路径` :  `/api/user/register`
 
 `请求方法` :  `POST`
@@ -33,6 +35,8 @@ Content-Type: application/json
 
 ## 用户登陆
 
+`接口描述` : `用户登陆接口,返回用户的基本信息和登陆后的 token `
+
 `请求路径` :  `/api/user/login`
 
 `请求方法` :  `POST`
@@ -62,6 +66,8 @@ Content-Type: application/json
 ```
 
 ## 用户列表
+
+`接口描述` : `请求用户列表, 用到登陆接口返回的 token 进行认证 `
 
 `请求路径` :  `/api/user/list/:page`
 
