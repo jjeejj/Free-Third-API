@@ -13,9 +13,14 @@
 Content-Type: application/x-www-form-urlencoded
 ```
 
-`请求参数` :
+`请求参数` : 参数类型 `body`
+| key        | value           | type  | desc | required | 
+|:----------:|:---------:|:-----:|  :---------:| :--------: |
+| url   |   http://t.cn/RsBT3CX    | String | 公众号文章地址 | true |
+
+示例:
 ```
-url=公众号文章地址
+url=https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651648073&idx=1&sn=24888559137489c0cfab6354c07d37e4&chksm=bd4dd7da8a3a5ecc23d20d567df87114777f547a1b6736b45fdcd095302e87e5e85286803e4e&mpshare=1
 ```
 
 `响应数据` : 
@@ -45,9 +50,14 @@ url=公众号文章地址
 无
 ```
 
-`请求参数` :
+`请求参数` : 参数类型 `query`
+| key        | value           | type  | desc |  required|
+|:----------:|:---------:|:-----:|  :---------:|:----: |
+| ip   | myip      | String | 只能是这个值 |  true |
+
+示例：
 ```
-ip=myip
+http://ip.taobao.com/service/getIpInfo.php?ip=myip
 ```
 
 `响应数据` : 
@@ -85,7 +95,12 @@ ip=myip
 Content-Type: application/x-www-form-urlencoded
 ```
 
-`请求参数` :
+`请求参数` : 参数类型 `body`
+| key        | value           | type  | desc | required | 
+|:----------:|:---------:|:-----:|  :---------:| :--------: |
+| ip   | myip      | String | 只能是这个值 | true |
+
+示例：
 ```
 ip=myip
 ```
