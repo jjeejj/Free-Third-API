@@ -15,7 +15,8 @@ module.exports = {
         sidebarDepth: 2,
         sidebar: [
             '/guide/',
-            '/tool/'
+            '/tool/',
+            '/动图宇宙/'
         ],
         repo: 'jjeejj/Free-Third-API',
         docsDir: 'docs',
