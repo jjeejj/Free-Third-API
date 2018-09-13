@@ -24,5 +24,5 @@ module.exports = {
     },
     serviceWorker: true,
     dest: 'docs',
-    base: '/',
+    base: '/Free-Third-API/',
 }
