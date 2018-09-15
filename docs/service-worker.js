@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "7a6f9c6eff9a92b7c27ec91e6cee81e1"
+    "revision": "258c6da5911f6a0d3b67442352047850"
   },
   {
     "url": "assets/css/0.styles.39d8b704.css",
@@ -40,32 +40,40 @@ self.__precacheManifest = [
     "revision": "d4d31fdbf647530bf2534bc8ffed240f"
   },
   {
-    "url": "assets/js/4.8b411f1a.js",
-    "revision": "2e33adc652a4fdecc5c9a1aa3fc5259c"
+    "url": "assets/js/4.06846cf4.js",
+    "revision": "1489cc62ab2da6e2f6df77feb85d2fc9"
   },
   {
-    "url": "assets/js/5.50f93e05.js",
-    "revision": "1315d19e3e447fd0f606cb6af7949cba"
+    "url": "assets/js/5.643bdf62.js",
+    "revision": "a1d75a1a7e71e6f0b6436c8b088852a8"
   },
   {
-    "url": "assets/js/6.aad9c394.js",
-    "revision": "2411bee743e979103361b63d48c559bb"
+    "url": "assets/js/6.cd783726.js",
+    "revision": "c9f2bd924fb74d4e84024b29cee1beb4"
   },
   {
-    "url": "assets/js/app.e0109300.js",
-    "revision": "41afa426d383fae0416ac8a7da3ab4b0"
+    "url": "assets/js/7.3ac0c4e4.js",
+    "revision": "3f4fe1ebbcf71531895379b56e05c66d"
+  },
+  {
+    "url": "assets/js/app.c52b7f3d.js",
+    "revision": "4d9ba5848337aa727ad1375b5f506d4b"
   },
   {
     "url": "guide/index.html",
-    "revision": "fd0298263b690f5f0801e1b89cc1e6f2"
+    "revision": "4781c7cae413afc8c89de9b332b088be"
   },
   {
     "url": "index.html",
-    "revision": "dabd2bba5568d798dcb769dcf0658a77"
+    "revision": "44283f4aa20835ea6547f8bc9f8ccea6"
   },
   {
     "url": "tool/index.html",
-    "revision": "d65dcdee08b79ec74316c5b9b1ef96bb"
+    "revision": "b55d7a585e412452b207745ae7c4d4db"
+  },
+  {
+    "url": "动图宇宙/index.html",
+    "revision": "68543ec39fdecc19b333d74a965fc721"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
