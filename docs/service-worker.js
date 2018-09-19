@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "a1d37f807469c1fce21eabc5954ff5f7"
+    "revision": "956193d657a7f66624f3aca8f9b234f7"
   },
   {
     "url": "assets/css/0.styles.39d8b704.css",
@@ -60,28 +60,28 @@ self.__precacheManifest = [
     "revision": "0046424d97a1662f00f02c93cafd3e1b"
   },
   {
-    "url": "assets/js/app.303d9d54.js",
-    "revision": "9942ffcf8527a76683c4a046e8b905d3"
+    "url": "assets/js/app.99c9abdc.js",
+    "revision": "1cdc76f26cb06988cbdf24ad44de7fe8"
   },
   {
     "url": "googleTrends/index.html",
-    "revision": "cee893dbd2b31d23eb1c7476d2c65ec2"
+    "revision": "c6e98fd83033f6a96341af7bfd84b760"
   },
   {
     "url": "guide/index.html",
-    "revision": "4feb51e21d53e76205b6d04b90006eae"
+    "revision": "e6a1789823cb39737ff477a18d305c1c"
   },
   {
     "url": "index.html",
-    "revision": "228c1bbdbd111b51922d2d4ef8afc1bd"
+    "revision": "5b6569cf23120892386bd081bf433c7b"
   },
   {
     "url": "tool/index.html",
-    "revision": "e648c28ebbcd2afb0d4fc2ef7e7242b7"
+    "revision": "c92119832a995a906d77c32a036496d1"
   },
   {
     "url": "动图宇宙/index.html",
-    "revision": "fb8f3acfbebac14d97bc4dd0c18b3b0b"
+    "revision": "1b631b597920717e063fd0ebfabdcf60"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
