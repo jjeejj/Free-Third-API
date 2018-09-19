@@ -10,6 +10,7 @@ module.exports = {
     themeConfig: {
         lastUpdated: 'Last Updated',
         searchMacxSuggestions: 50,
+        serviceWorker: true,
         // displayAllHeaders: true,
         activeHeaderLinks: true,
         sidebarDepth: 2,
