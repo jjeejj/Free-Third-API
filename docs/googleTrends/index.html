@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>API 接口文档管理 | Google指数API</title>
+    <meta name="description" content="免费的第三方API接口的收集(若有侵权,请联系我删除)">
+    <link rel="icon" href="/Free-Third-API/favicon.ico">
+    
+    <link rel="preload" href="/Free-Third-API/assets/css/5.styles.72743211.css" as="style"><link rel="preload" href="/Free-Third-API/assets/js/app.fc96dd7b.js" as="script"><link rel="preload" href="/Free-Third-API/assets/js/3.83cb1d4d.js" as="script"><link rel="prefetch" href="/Free-Third-API/assets/js/0.7929b963.js"><link rel="prefetch" href="/Free-Third-API/assets/js/1.64380550.js"><link rel="prefetch" href="/Free-Third-API/assets/js/2.10f081bf.js"><link rel="prefetch" href="/Free-Third-API/assets/js/4.36e65d6f.js">
+    <link rel="stylesheet" href="/Free-Third-API/assets/css/5.styles.72743211.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/Free-Third-API/" class="home-link router-link-active"><!----><span class="site-name">API 接口文档管理</span></a><div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><a href="https://github.com/jjeejj/Free-Third-API" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><a href="https://github.com/jjeejj/Free-Third-API" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav><ul class="sidebar-links"><li><a href="/Free-Third-API/guide/" class="sidebar-link">使用说明</a></li><li><a href="/Free-Third-API/tool/" class="sidebar-link">工具方法API</a></li><li><a href="/Free-Third-API/动图宇宙/" class="sidebar-link">动图宇宙API</a></li><li><a href="/Free-Third-API/googleTrends/" class="active sidebar-link">Google指数API</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Free-Third-API/googleTrends/#第一步-根据关键词-获取请求的-widgets" class="sidebar-link">第一步:根据关键词 获取请求的 widgets</a></li><li class="sidebar-sub-header"><a href="/Free-Third-API/googleTrends/#第二步-获取指数-timeline-数据" class="sidebar-link">第二步: 获取指数 timeline 数据</a></li><li class="sidebar-sub-header"><a href="/Free-Third-API/googleTrends/#获取-geo-列表" class="sidebar-link">获取 geo 列表</a></li><li class="sidebar-sub-header"><a href="/Free-Third-API/googleTrends/#获取-category-列表" class="sidebar-link">获取 category 列表</a></li><li class="sidebar-sub-header"><a href="/Free-Third-API/googleTrends/#获取-time-列表" class="sidebar-link">获取 time 列表</a></li><li class="sidebar-sub-header"><a href="/Free-Third-API/googleTrends/#获取-property-列表" class="sidebar-link">获取 property 列表</a></li></ul></li></ul></div><div class="page"><div class="content"><h1 id="google指数api"><a href="#google指数api" aria-hidden="true" class="header-anchor">#</a> Google指数API</h1><p>该接口是分 <strong>2</strong> 个步骤</p><h2 id="第一步-根据关键词-获取请求的-widgets"><a href="#第一步-根据关键词-获取请求的-widgets" aria-hidden="true" class="header-anchor">#</a> 第一步:根据关键词 获取请求的 widgets</h2><p><code>接口描述</code> : <code>根据关键词 获取第二步请求的 widgets request</code></p><p><code>请求地址</code> :  <code>https://trends.google.com/trends/api/explore?hl=zh-CN&amp;tz=-480&amp;req={&quot;comparisonItem&quot;:[{&quot;keyword&quot;:&quot;ETHEREUM&quot;,&quot;geo&quot;:&quot;AL&quot;,&quot;time&quot;:&quot;now 4-H&quot;}],&quot;category&quot;:0,&quot;property&quot;:&quot;froogle&quot;}</code></p><p><code>请求方法</code> :  <code>GET</code></p><p><code>请求头</code>:</p><div class="language- extra-class"><pre class="language-text"><code>无
+</code></pre></div><p><code>请求参数</code> :</p><p>参数类型 <code>query</code></p><table><thead><tr><th style="text-align:center">key</th><th style="text-align:center">value</th><th style="text-align:center">type</th><th style="text-align:center">desc</th><th style="text-align:center">required</th></tr></thead><tbody><tr><td style="text-align:center">hl</td><td style="text-align:center">zh-CN</td><td style="text-align:center">String</td><td style="text-align:center">本地主机的语言</td><td style="text-align:center">true</td></tr><tr><td style="text-align:center">tz</td><td style="text-align:center">-480</td><td style="text-align:center">Int</td><td style="text-align:center">默认值</td><td style="text-align:center">true</td></tr><tr><td style="text-align:center">req</td><td style="text-align:center">{}</td><td style="text-align:center">Object</td><td style="text-align:center">请求的具体参数</td><td style="text-align:center">true</td></tr><tr><td style="text-align:center">comparisonItem</td><td style="text-align:center">[]</td><td style="text-align:center">Array</td><td style="text-align:center"></td><td style="text-align:center">true</td></tr><tr><td style="text-align:center">keyword</td><td style="text-align:center">ETHEREUM</td><td style="text-align:center">String</td><td style="text-align:center">查询的关键词</td><td style="text-align:center">true</td></tr><tr><td style="text-align:center">geo</td><td style="text-align:center">AL</td><td style="text-align:center">Object</td><td style="text-align:center">请求查询的国家地区</td><td style="text-align:center">true</td></tr><tr><td style="text-align:center">time</td><td style="text-align:center">now 4-H</td><td style="text-align:center">String</td><td style="text-align:center">请求的时间段</td><td style="text-align:center">true</td></tr><tr><td style="text-align:center">category</td><td style="text-align:center">65</td><td style="text-align:center">Int</td><td style="text-align:center">请求的行业</td><td style="text-align:center">true</td></tr><tr><td style="text-align:center">property</td><td style="text-align:center">froogle</td><td style="text-align:center">String</td><td style="text-align:center">请求的数据来源</td><td style="text-align:center">true</td></tr></tbody></table><p><code>响应数据</code> :</p><div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;widgets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;request&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2018-09-16T00\\:46\\:39 2018-09-16T04\\:46\\:39&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;resolution&quot;</span><span class="token operator">:</span> <span class="token string">&quot;MINUTE&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;zh-CN&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;comparisonItem&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;geo&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;complexKeywordsRestriction&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;keyword&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                                <span class="token punctuation">{</span>
+                                    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BROAD&quot;</span><span class="token punctuation">,</span>
+                                    <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ETHEREUM&quot;</span>
+                                <span class="token punctuation">}</span>
+                            <span class="token punctuation">]</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;requestOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;property&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;backend&quot;</span><span class="token operator">:</span> <span class="token string">&quot;CM&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;category&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;lineAnnotationText&quot;</span><span class="token operator">:</span> <span class="token string">&quot;搜索热度&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;bullets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ETHEREUM&quot;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;showLegend&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;showAverages&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;helpDialog&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;热度随时间变化的趋势&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;数字代表相对于图表中指定区域和指定时间内最高点的搜索热度。热度最高的字词得 100 分；热度是前者一半的字词得 50 分；没有足够数据的字词得 0 分。&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;token&quot;</span><span class="token operator">:</span> <span class="token string">&quot;APP6_UEAAAAAW58xr235PzHWJaKnODsR3---4vBUn1xl&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;TIMESERIES&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fe_line_chart&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;热度随时间变化的趋势&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;template&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fe&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;embedTemplate&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fe_embed&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;isLong&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;isCurated&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;request&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;geo&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;comparisonItem&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2018-09-16T00\\:46\\:39 2018-09-16T04\\:46\\:39&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;complexKeywordsRestriction&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;keyword&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                                <span class="token punctuation">{</span>
+                                    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BROAD&quot;</span><span class="token punctuation">,</span>
+                                    <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ETHEREUM&quot;</span>
+                                <span class="token punctuation">}</span>
+                            <span class="token punctuation">]</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;resolution&quot;</span><span class="token operator">:</span> <span class="token string">&quot;COUNTRY&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;locale&quot;</span><span class="token operator">:</span> <span class="token string">&quot;zh-CN&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;requestOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;property&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;backend&quot;</span><span class="token operator">:</span> <span class="token string">&quot;CM&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;category&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;geo&quot;</span><span class="token operator">:</span> <span class="token string">&quot;world&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;resolution&quot;</span><span class="token operator">:</span> <span class="token string">&quot;countries&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;searchInterestLabel&quot;</span><span class="token operator">:</span> <span class="token string">&quot;搜索热度&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;displayMode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regions&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;helpDialog&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;按区域显示的搜索热度&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;查看在指定时间范围内，您的字词在哪个位置的热度最高。得分为 0 - 100 分：在该位置所有搜索中热度最高的字词得 100 分；字词热度是前者一半的位置得 50 分；没有足够字词数据的位置得 0 分。&lt;p&gt;&lt;p&gt;&lt;b&gt;注意&lt;/b&gt;：得分越高表示字词在当地所有查询中占比越高，并不代表绝对查询次数越多。因此，如果一个小国家/地区的“香蕉”查询次数占比是 80%，其得分会比该比例只有 40% 的大国家/地区高出 1 倍。&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://support.google.com/trends/answer/4355212&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;color&quot;</span><span class="token operator">:</span> <span class="token string">&quot;PALETTE_COLOR_1&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;bullet&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ETHEREUM&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;token&quot;</span><span class="token operator">:</span> <span class="token string">&quot;APP6_UEAAAAAW58xr7Hf9Kcuvv7H-E6d3l7beRJoTPVe&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;GEO_MAP&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fe_geo_chart_explore&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;按区域显示的搜索热度&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;template&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fe&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;embedTemplate&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fe_embed&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;isLong&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;isCurated&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;request&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;restriction&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;geo&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2018-09-16T00\\:46\\:39 2018-09-16T04\\:46\\:39&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;originalTimeRangeForExploreUrl&quot;</span><span class="token operator">:</span> <span class="token string">&quot;now 4-H&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;complexKeywordsRestriction&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;keyword&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                            <span class="token punctuation">{</span>
+                                <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BROAD&quot;</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ETHEREUM&quot;</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">]</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;keywordType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ENTITY&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;metric&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">&quot;TOP&quot;</span><span class="token punctuation">,</span>
+                    <span class="token string">&quot;RISING&quot;</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;trendinessSettings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;compareTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2018-09-15T20\\:46\\:39 2018-09-16T00\\:46\\:39&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;requestOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;property&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;backend&quot;</span><span class="token operator">:</span> <span class="token string">&quot;CM&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;category&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;language&quot;</span><span class="token operator">:</span> <span class="token string">&quot;zh&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;helpDialog&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;相关主题&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;搜索您的字词的用户还搜索了这些主题。您可以按以下指标查看：&lt;p&gt;* &lt;b&gt;热门&lt;/b&gt; - 最热门的主题。得分按相对比例计算：最常搜索的主题得 100 分，搜索频率是前者一半的主题得 50 分，以此类推。&lt;p&gt;* &lt;b&gt;搜索量上升&lt;/b&gt; - 自上一时间段以来，搜索频率增幅最大的相关主题。标记为“飙升”的主题可能是新主题，之前几乎没有任何搜索次数，因此无法评估其搜索频率的增幅。&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;color&quot;</span><span class="token operator">:</span> <span class="token string">&quot;PALETTE_COLOR_1&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;keywordName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ETHEREUM&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;token&quot;</span><span class="token operator">:</span> <span class="token string">&quot;APP6_UEAAAAAW58xrwalsf8-CaDP8WYJZMwHN3X5FqWG&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;RELATED_TOPICS&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fe_related_searches&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;相关主题&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;template&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fe&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;embedTemplate&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fe_embed&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;isLong&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;isCurated&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;request&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;restriction&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;geo&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2018-09-16T00\\:46\\:39 2018-09-16T04\\:46\\:39&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;originalTimeRangeForExploreUrl&quot;</span><span class="token operator">:</span> <span class="token string">&quot;now 4-H&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;complexKeywordsRestriction&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;keyword&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                            <span class="token punctuation">{</span>
+                                <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BROAD&quot;</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ETHEREUM&quot;</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">]</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;keywordType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;QUERY&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;metric&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">&quot;TOP&quot;</span><span class="token punctuation">,</span>
+                    <span class="token string">&quot;RISING&quot;</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;trendinessSettings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;compareTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2018-09-15T20\\:46\\:39 2018-09-16T00\\:46\\:39&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;requestOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;property&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;backend&quot;</span><span class="token operator">:</span> <span class="token string">&quot;CM&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;category&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;language&quot;</span><span class="token operator">:</span> <span class="token string">&quot;zh&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;helpDialog&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;相关查询&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;搜索您的字词的用户还搜索了这些查询。您可以按以下指标排序：&lt;p&gt;* &lt;b&gt;热门&lt;/b&gt; - 最热门的搜索查询。得分按相对比例计算：最常搜索的查询得 100 分，搜索频率是前者一半的查询得 50 分，以此类推。&lt;p&gt;* &lt;b&gt;搜索量上升&lt;/b&gt; - 自上一时间段以来，搜索频率增幅最大的相关查询。标记为“飙升”的查询可能是新查询，之前几乎没有任何搜索次数，因此无法评估其搜索频率的增幅。&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://support.google.com/trends/answer/4355000&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;color&quot;</span><span class="token operator">:</span> <span class="token string">&quot;PALETTE_COLOR_1&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;keywordName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ETHEREUM&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;token&quot;</span><span class="token operator">:</span> <span class="token string">&quot;APP6_UEAAAAAW58xr_L1MuiUuIoykaIPkcDPbuA4pX0_&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;RELATED_QUERIES&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fe_related_searches&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;相关查询&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;template&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fe&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;embedTemplate&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fe_embed&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;isLong&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;isCurated&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;keywords&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;keyword&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ETHEREUM&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ETHEREUM&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;搜索字词&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;timeRanges&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;过去4小时&quot;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;examples&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;shareText&quot;</span><span class="token operator">:</span> <span class="token string">&quot;在 Google 趋势上按时间、地点和热门程度探索“ETHEREUM”的搜索热度&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;shouldShowMultiHeatMapMessage&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="第二步-获取指数-timeline-数据"><a href="#第二步-获取指数-timeline-数据" aria-hidden="true" class="header-anchor">#</a> 第二步: 获取指数 timeline 数据</h2><p><code>接口描述</code> : <code>根据第一步请求返回的 widgets rerquest 数据 请求具体的 timeline 数据</code></p><p><code>请求地址</code> :  <code>https://trends.google.com/trends/api/widgetdata/multiline?hl=zh-CN&amp;tz=-480&amp;req={&quot;time&quot;:&quot;2018-04-26T21\\:57\\:05 2018-04-27T01\\:57\\:05&quot;,&quot;resolution&quot;:&quot;MINUTE&quot;,&quot;locale&quot;:&quot;zh-CN&quot;,&quot;comparisonItem&quot;:[{&quot;geo&quot;:{},&quot;complexKeywordsRestriction&quot;:{&quot;keyword&quot;:[{&quot;type&quot;:&quot;BROAD&quot;,&quot;value&quot;:&quot;ETHEREUM&quot;}]}}],&quot;requestOptions&quot;:{&quot;property&quot;:&quot;&quot;,&quot;backend&quot;:&quot;CM&quot;,&quot;category&quot;:0}}&amp;token=APP6_UEAAAAAWuPU8aWP5P1iR7V7U14w0z7FpbLrCp3D</code></p><p><code>请求方法</code> :  <code>GET</code></p><p><code>请求头</code>:</p><div class="language- extra-class"><pre class="language-text"><code>无
+</code></pre></div><p><code>请求参数</code> :</p><p>参数类型 <code>query</code></p><table><thead><tr><th style="text-align:center">key</th><th style="text-align:center">value</th><th style="text-align:center">type</th><th style="text-align:center">desc</th><th style="text-align:center">required</th></tr></thead><tbody><tr><td style="text-align:center">hl</td><td style="text-align:center">zh-CN</td><td style="text-align:center">String</td><td style="text-align:center">本地主机的语言</td><td style="text-align:center">true</td></tr><tr><td style="text-align:center">tz</td><td style="text-align:center">-480</td><td style="text-align:center">Int</td><td style="text-align:center">默认值</td><td style="text-align:center">true</td></tr><tr><td style="text-align:center">req</td><td style="text-align:center">{}</td><td style="text-align:center">Object</td><td style="text-align:center"><strong>就是第一步返回的 widgets 对应某一个元素的 request 对象</strong></td><td style="text-align:center">true</td></tr><tr><td style="text-align:center">token</td><td style="text-align:center">APP6_UEAAAAAWuPU8a...</td><td style="text-align:center">String</td><td style="text-align:center"><strong>就是第一步返回的 widgets 对应某一个元素的 token 的值</strong></td><td style="text-align:center">true</td></tr></tbody></table><p><code>响应数据</code> :</p><div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;timelineData&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1537070220&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;formattedTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2018年9月16日 上午11:57&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;formattedAxisTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;上午11:57&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token number">36</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;hasData&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token boolean">true</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;formattedValue&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">&quot;36&quot;</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1537070280&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;formattedTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2018年9月16日 上午11:58&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;formattedAxisTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;上午11:58&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token number">40</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;hasData&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token boolean">true</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;formattedValue&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">&quot;40&quot;</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            ....
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1537084500&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;formattedTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2018年9月16日 下午3:55&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;formattedAxisTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;下午3:55&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token number">39</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;hasData&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token boolean">true</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;formattedValue&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">&quot;39&quot;</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;averages&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>第一步返回的的 <code>widgets</code> 数组中有 4个对象,分别对应页面中的 <strong>热度随时间变化的趋势</strong> | <strong>搜索热度（按子区域</strong> | <strong>相关主题</strong> | <strong>相关查询</strong> 。 提取对应的某一 <code>widgets</code> 中的对象数据,查询对应的详细数据</p></blockquote><h2 id="获取-geo-列表"><a href="#获取-geo-列表" aria-hidden="true" class="header-anchor">#</a> 获取 geo 列表</h2><p><code>接口描述</code> : <code>获取第一步请求参数中的 geo 数值列表</code></p><p><code>请求地址</code> :  <code>https://trends.google.com/trends/api/explore/pickers/geo?hl=zh-CN&amp;tz=-480</code></p><p><code>请求方法</code> :  <code>GET</code></p><p><code>请求头</code>:</p><div class="language- extra-class"><pre class="language-text"><code>无
+</code></pre></div><p><code>请求参数</code> :</p><p>参数类型 <code>query</code></p><table><thead><tr><th style="text-align:center">key</th><th style="text-align:center">value</th><th style="text-align:center">type</th><th style="text-align:center">desc</th><th style="text-align:center">required</th></tr></thead><tbody><tr><td style="text-align:center">hl</td><td style="text-align:center">zh-CN</td><td style="text-align:center">String</td><td style="text-align:center">本地主机的语言</td><td style="text-align:center">true</td></tr><tr><td style="text-align:center">tz</td><td style="text-align:center">-480</td><td style="text-align:center">Int</td><td style="text-align:center">默认值</td><td style="text-align:center">true</td></tr></tbody></table><blockquote><p>参数要和第一步的值一致</p></blockquote><p><code>响应数据</code> :</p><div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        ...
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                ...
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;中央区&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;M&quot;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;以色列&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;IL&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;英属印度洋领地&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;IO&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        ...
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;安徽省&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;34&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                ...
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;浙江省&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;33&quot;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;中国&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;CN&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;全球&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="获取-category-列表"><a href="#获取-category-列表" aria-hidden="true" class="header-anchor">#</a> 获取 category 列表</h2><p><code>接口描述</code> : <code>获取第一步请求参数中的 category 数值列表</code></p><p><code>请求地址</code> :  <code>https://trends.google.com/trends/api/explore/pickers/category?hl=zh-CN&amp;tz=-480</code></p><p><code>请求方法</code> :  <code>GET</code></p><p><code>请求头</code>:</p><div class="language- extra-class"><pre class="language-text"><code>无
+</code></pre></div><p><code>请求参数</code> :</p><p>参数类型 <code>query</code></p><table><thead><tr><th style="text-align:center">key</th><th style="text-align:center">value</th><th style="text-align:center">type</th><th style="text-align:center">desc</th><th style="text-align:center">required</th></tr></thead><tbody><tr><td style="text-align:center">hl</td><td style="text-align:center">zh-CN</td><td style="text-align:center">String</td><td style="text-align:center">本地主机的语言</td><td style="text-align:center">true</td></tr><tr><td style="text-align:center">tz</td><td style="text-align:center">-480</td><td style="text-align:center">Int</td><td style="text-align:center">默认值</td><td style="text-align:center">true</td></tr></tbody></table><blockquote><p>参数要和第一步的值一致</p></blockquote><p><code>响应数据</code> :</p><div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;古董与收藏&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">64</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                        <span class="token punctuation">{</span>
+                            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;打猎与射击&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">461</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        ...
+                    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;户外活动&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">688</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                        <span class="token punctuation">{</span>
+                            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;彩票与抽奖&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">364</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span>
+                            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;电影与电视奖项&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1108</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;竞赛、奖项与奖品&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1276</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;俱乐部与组织&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">189</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                ...
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;在线社区&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">299</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;所有类别&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="获取-time-列表"><a href="#获取-time-列表" aria-hidden="true" class="header-anchor">#</a> 获取 time 列表</h2><p><code>接口描述</code> : <code>获取第一步请求参数中的 time 数值列表</code></p><p>没有找到接口,直接写出来</p><table><thead><tr><th style="text-align:center">name</th><th style="text-align:center">value</th></tr></thead><tbody><tr><td style="text-align:center">过去1小时</td><td style="text-align:center">now 1-H</td></tr><tr><td style="text-align:center">过去4小时</td><td style="text-align:center">now 4-H</td></tr><tr><td style="text-align:center">过去1天</td><td style="text-align:center">now 1-d</td></tr><tr><td style="text-align:center">过去7天</td><td style="text-align:center">now 7-d</td></tr><tr><td style="text-align:center">过去30天</td><td style="text-align:center">today 1-m</td></tr><tr><td style="text-align:center">过去90天</td><td style="text-align:center">today 3-m</td></tr><tr><td style="text-align:center">过去1年</td><td style="text-align:center">today 12-m</td></tr></tbody></table><blockquote><p>其他的时间间隔,可以根据上面的规律去尝试</p></blockquote><h2 id="获取-property-列表"><a href="#获取-property-列表" aria-hidden="true" class="header-anchor">#</a> 获取 property 列表</h2><p><code>接口描述</code> : <code>获取第一步请求参数中的 property 数值列表</code></p><p>没有找到接口,直接写出来</p><table><thead><tr><th style="text-align:center">name</th><th style="text-align:center">value</th></tr></thead><tbody><tr><td style="text-align:center">Google 图片搜索</td><td style="text-align:center">images</td></tr><tr><td style="text-align:center">Google 网页搜索</td><td style="text-align:center">&quot;&quot; (默认值)</td></tr><tr><td style="text-align:center">Google 新闻搜索</td><td style="text-align:center">news</td></tr><tr><td style="text-align:center">Google 购物</td><td style="text-align:center">froogle</td></tr><tr><td style="text-align:center">Youtube 搜索</td><td style="text-align:center">youtube</td></tr></tbody></table></div><div class="page-edit"><!----><div class="last-updated"><span class="prefix">Last Updated: </span><span class="time">9/16/2018, 4:49:00 PM</span></div></div><div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/Free-Third-API/动图宇宙/" class="prev">
+          动图宇宙API
+        </a></span><!----></p></div></div><!----></div></div>
+    <script src="/Free-Third-API/assets/js/3.83cb1d4d.js" defer></script><script src="/Free-Third-API/assets/js/app.fc96dd7b.js" defer></script>
+  </body>
+</html>

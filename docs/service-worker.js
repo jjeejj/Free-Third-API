@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -21,72 +21,60 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "258c6da5911f6a0d3b67442352047850"
+    "revision": "3d3c570148be55f39aa00e8f0536559d"
   },
   {
-    "url": "assets/css/0.styles.39d8b704.css",
-    "revision": "0b104e06bbcdf55ac04c0380c87c0e0f"
+    "url": "assets/css/5.styles.72743211.css",
+    "revision": "b312b8879b1f3d427e25b3ac081b371e"
   },
   {
     "url": "assets/img/search.83621669.svg",
     "revision": "83621669651b9a3d4bf64d1a670ad856"
   },
   {
-    "url": "assets/js/2.285762ea.js",
-    "revision": "93afbd4e91ed17280e84a6930dc81b17"
+    "url": "assets/js/0.7929b963.js",
+    "revision": "9baada6ed1a5aa09f67d919d2fcb227d"
   },
   {
-    "url": "assets/js/3.eeb1c1bf.js",
-    "revision": "d4d31fdbf647530bf2534bc8ffed240f"
+    "url": "assets/js/1.64380550.js",
+    "revision": "3f03391d4b26b035bf720de6dc5804af"
   },
   {
-    "url": "assets/js/4.06846cf4.js",
-    "revision": "1489cc62ab2da6e2f6df77feb85d2fc9"
+    "url": "assets/js/2.10f081bf.js",
+    "revision": "16c10adc84abb3615ac20a650174fe80"
   },
   {
-    "url": "assets/js/5.643bdf62.js",
-    "revision": "a1d75a1a7e71e6f0b6436c8b088852a8"
+    "url": "assets/js/3.83cb1d4d.js",
+    "revision": "09a5ffa7af068d70984d77c3eb19d178"
   },
   {
-    "url": "assets/js/6.cd783726.js",
-    "revision": "c9f2bd924fb74d4e84024b29cee1beb4"
+    "url": "assets/js/4.36e65d6f.js",
+    "revision": "efcc53750a384a55d6371c6e35086186"
   },
   {
-    "url": "assets/js/7.3ac0c4e4.js",
-    "revision": "3f4fe1ebbcf71531895379b56e05c66d"
+    "url": "assets/js/app.fc96dd7b.js",
+    "revision": "8439a2ef2c47496b5b135f44b89025e7"
   },
   {
-    "url": "assets/js/app.c52b7f3d.js",
-    "revision": "4d9ba5848337aa727ad1375b5f506d4b"
+    "url": "googleTrends/index.html",
+    "revision": "76d0f96e97b942a2aec4f4d1f8f5dee8"
   },
   {
     "url": "guide/index.html",
-    "revision": "4781c7cae413afc8c89de9b332b088be"
+    "revision": "9fb74c7f79f44df15052660dd16db4fa"
   },
   {
     "url": "index.html",
-    "revision": "44283f4aa20835ea6547f8bc9f8ccea6"
+    "revision": "7d3ded36af069f7edc1536664fdb2f77"
   },
   {
     "url": "tool/index.html",
-    "revision": "b55d7a585e412452b207745ae7c4d4db"
+    "revision": "26d8953c07d240fbc4fc55597d415682"
   },
   {
     "url": "动图宇宙/index.html",
-    "revision": "68543ec39fdecc19b333d74a965fc721"
+    "revision": "ff160944b034be9dad7ad46be818c336"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
-addEventListener('message', event => {
-  const replyPort = event.ports[0]
-  const message = event.data
-  if (replyPort && message && message.type === 'skip-waiting') {
-    event.waitUntil(
-      self.skipWaiting().then(
-        () => replyPort.postMessage({ error: null }),
-        error => replyPort.postMessage({ error })
-      )
-    )
-  }
-})
